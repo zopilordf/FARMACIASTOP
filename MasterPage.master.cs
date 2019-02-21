@@ -9,6 +9,14 @@ public partial class MasterPage : System.Web.UI.MasterPage
 {
     protected void Page_Load(object sender, EventArgs e)
     {
+        Session["Usuario"] = "jdieguez";        
+        if (Session["Usuario"] != null)
+        {
 
+        }
+        else
+        {
+            Response.Redirect("Login.aspx");
+        }
     }
 }

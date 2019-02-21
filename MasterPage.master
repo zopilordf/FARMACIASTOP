@@ -151,10 +151,10 @@
                             </span>
                         </a>
                         <ul class="treeview-menu">
-                            <li><a href="productos.aspx"><i class="fa fa-book"></i><span>Productos</span></a></li>
-                            <li><a href="tiposproducto.aspx"><i class="fa fa-book"></i><span>Tipos de producto</span></a></li>
-                            <li><a href="laboratorios.aspx"><i class="fa fa-book"></i><span>Laboratorios</span></a></li>
-                            <li><a href="unidadesdemedida.aspx"><i class="fa fa-book"></i><span>Unidades de medida</span></a></li>
+                            <li><a href="productos.aspx"><i class="fa fa-cube"></i><span>Productos</span></a></li>
+                            <li><a href="tiposproducto.aspx"><i class="fa fa-cubes"></i><span>Tipos de producto</span></a></li>
+                            <li><a href="laboratorios.aspx"><i class="fa fa-hospital-o"></i><span>Laboratorios</span></a></li>
+                            <li><a href="unidadesdemedida.aspx"><i class="fa fa-object-ungroup"></i><span>Unidades de medida</span></a></li>
                         </ul>
                     </li>
                     <li class="header">CONFIGURACIÓN</li>
