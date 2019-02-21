@@ -40,3 +40,7 @@ Unzip archivos: bower_components.zip, plugins.zip
 
 Modulo de Inventario   ---------------- 0%
 
+Tablas: FTOP30100 Ingresos, FTOP30101 Egresos, FTOP30102 Traslados
+
+Alimentar estas 3 tablas primero con sus respectivos formularios, luego ya se pueden hacer reportes
+
