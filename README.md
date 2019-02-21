@@ -35,7 +35,11 @@ Sesion: Windows Authentication
 
 Tiempos del desarrollo: tiempos.xlsx
 
+Unzip archivos: 
 
+bower_components.zip
+
+plugins.zip
 
 
 Modulo de Inventario   ---------------- 0%
