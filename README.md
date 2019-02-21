@@ -1,6 +1,8 @@
 # FARMACIASTOP
 Repositorio Farmacias TOP
+
 ------------------------------------------------------ZOPE------------------------------------------------------
+
 Modulo de Configuracion ---------------- 90%
 Carga #1, #2, #3 
 
