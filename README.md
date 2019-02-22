@@ -6,9 +6,6 @@ Repositorio Farmacias TOP
 
 Pendientes Modulos Configuracion:
 
-Login
-
-Variables de Session
 
 Administracion Menu por Rol
 
@@ -16,9 +13,9 @@ Administracion Menu por Rol
 
 
 
-Modulo de Configuracion ---------------- 90%
+Modulo de Configuracion ---------------- 95%
 
-Modulo de Facturacion   ---------------- 0%
+Modulo de Facturacion   ---------------- 5%
 
 Modulo de Entega Final  ---------------- 0%
 
