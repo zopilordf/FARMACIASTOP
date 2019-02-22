@@ -34,9 +34,7 @@ Tiempos del desarrollo: tiempos.xlsx
 
 Unzip archivos: bower_components.zip, plugins.zip
 
-Luego de crear tablas, Insertar en FTOP00100 para pruebas. 
-
-usuario: admin, contraseña: 1234
+Luego de crear tablas, Insertar en FTOP00100 para pruebas. usuario: admin, contraseña: 1234
 
 
 Modulo de Inventario   ---------------- 0%
