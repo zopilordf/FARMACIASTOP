@@ -39,6 +39,7 @@
         </asp:ContentPlaceHolder>
 </head>
 <body class="hold-transition skin-green sidebar-mini">
+    <form id="form1" runat="server">
     <div class="wrapper">
 
         <header class="main-header">
@@ -79,12 +80,12 @@
                         <img src="dist/img/avatar5.png" class="img-circle" alt="User Image">
                     </div>
                     <div class="pull-left info">
-                        <p>Usuario Ingresado</p>
+                        <p>Usuario:&nbsp;<asp:Label ID="lblNombreUsuario" runat="server"></asp:Label></p>
                         <a href="#"><i class="fa fa-circle text-success"></i>Online</a>
                         
                     </div>
                 </div>
-                <a href="login.aspx" class="btn bg-navy btn-flat btn-block"><i class="fa fa-sign-out"></i>&nbsp;Cerrar Sesión</a>
+                <asp:Button ID="btnLogout" runat="server" Text="Cerrar Sesión" class="btn bg-navy btn-flat btn-block" OnClick="btnLogout_Click" />
                 <!-- sidebar menu: : style can be found in sidebar.less -->
                 <ul class="sidebar-menu" data-widget="tree">
                     <li class="header">MENU PRINCIPAL</li>
@@ -101,7 +102,7 @@
                             <li><a href="anulacionfacturas.aspx"><i class="fa fa-ban"></i>Anulación de Facturas</a></li>
                             <li><a href="clientes.aspx"><i class="fa fa-child"></i><span>Clientes</span></a></li>
                             <li class="treeview">
-                                <a href="#"><i class="fa fa-circle-o"></i>Reportes
+                                <a href="#"><i class="fa fa-bar-chart"></i>Reportes
                
                                     <span class="pull-right-container">
                                         <i class="fa fa-angle-left pull-right"></i>
@@ -125,9 +126,9 @@
                         <ul class="treeview-menu">
                             <li><a href="ingresos.aspx"><i class="fa fa-mail-forward"></i>Ingresos</a></li>
                             <li><a href="egresos.aspx"><i class="fa fa-mail-reply"></i>Egresos</a></li>
-                            <li><a href="traslados.aspx"><i class="fa fa-mail-reply-all"></i>Traslados</a></li>
+                            <li><a href="traslados.aspx"><i class="fa fa-exchange"></i>Traslados</a></li>
                             <li class="treeview">
-                                <a href="#"><i class="fa fa-circle-o"></i>Reportes
+                                <a href="#"><i class="fa fa-bar-chart"></i>Reportes
                
                                     <span class="pull-right-container">
                                         <i class="fa fa-angle-left pull-right"></i>
@@ -180,7 +181,7 @@
             <!-- /.sidebar -->
         </aside>
 
-        <form id="form1" runat="server">
+        
             <div>
                 <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
                 </asp:ContentPlaceHolder>
