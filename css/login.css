@@ -1,0 +1,26 @@
+﻿html, body {
+    background-image: url('../images/background-login.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+}
+
+.container {
+    padding-top:150px;
+    width:500px;
+}
+
+.login-logo {
+    color:#808080;
+}
+
+.login-box-body {
+    color:#fff;
+    background-color:#809acf;
+    border-radius: 25px;
+    align-content: center;
+    opacity:0.8;
+}
+.login-box-msg {
+    font-size:18px;
+}
