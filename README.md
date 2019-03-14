@@ -1,6 +1,16 @@
 # FARMACIASTOP
 Repositorio Farmacias TOP
 
+
+PARAMETROS GLOBALES:
+
+USUARIO: crear usuario admin con contraseña Admin123!
+
+Cliente: crear cliente "c/f" con id = 0
+
+Variable global en web.config de la farmacia a implementar
+
+
 ------------------------------------------------------ZOPE------------------------------------------------------
 
 
