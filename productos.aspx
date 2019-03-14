@@ -90,11 +90,17 @@
                 </div>
                 <!-- /.box-header -->
                 <div class="box-body">
+                    <div class="form-group">
+                        <label>Busqueda</label>
+                        <asp:TextBox ID="tbBusqueda" runat="server" class="form-control"></asp:TextBox>
+                        <asp:Button ID="btnBusqueda" runat="server" Text="Buscar..." class="btn btn-success" OnClick="btnBusqueda_Click" />
+                    </div>
                     <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" CellPadding="4" ForeColor="#333333" GridLines="None" Width="100%" OnRowCommand="GridView1_RowCommand">
                         <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
                         <Columns>
                             <asp:BoundField DataField="idproducto" HeaderText="ID" SortExpression="idproducto" InsertVisible="False" ReadOnly="True" />
                             <asp:BoundField DataField="nombre" HeaderText="Nombre" SortExpression="nombre" />
+                            <asp:BoundField DataField="descripcion" HeaderText="Descripcion" SortExpression="descripcion" />
                             <asp:BoundField DataField="estado" HeaderText="Estado" SortExpression="estado" />
                             <asp:BoundField DataField="unidaddemedida" HeaderText="Unidad de Medida" SortExpression="unidaddemedida" />
                             <asp:BoundField DataField="medida" HeaderText="medida" SortExpression="Medida" />
@@ -113,7 +119,15 @@
                         <SortedDescendingCellStyle BackColor="#FFFDF8" />
                         <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
                     </asp:GridView>
-                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:FARMACIASTOPConnectionString %>" SelectCommand="SELECT idproducto, nombre, FTOP10105.estado, FTOP10106.unidaddemedida, medida, FTOP10102.fechacreacion, FTOP10102.usuariocreacion FROM FTOP10102, FTOP10106, FTOP10105 WHERE FTOP10102.idunidaddemedida = FTOP10106.idunidaddemedida AND FTOP10102.idestado = FTOP10105.idestado"></asp:SqlDataSource>
+                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:FARMACIASTOPConnectionString %>" SelectCommand="SELECT idproducto, nombre, descripcion, FTOP10105.estado, FTOP10106.unidaddemedida, medida, FTOP10102.fechacreacion, FTOP10102.usuariocreacion 
+                                                                                                                                                                    FROM FTOP10102, FTOP10106, FTOP10105 
+                                                                                                                                                                    WHERE FTOP10102.idunidaddemedida = FTOP10106.idunidaddemedida AND FTOP10102.idestado = FTOP10105.idestado AND (FTOP10102.nombre = @tbBusqueda OR FTOP10102.descripcion = @tbBusqueda) ">
+                        <SelectParameters>
+                                    <asp:ControlParameter Name="tbBusqueda"
+                                        ControlID="tbBusqueda"
+                                        PropertyName="Text" />
+                                </SelectParameters>
+                    </asp:SqlDataSource>
 
                     <!-- /.row -->
                 </div>

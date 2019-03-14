@@ -96,7 +96,7 @@ public partial class _Productos : System.Web.UI.Page
             }
             //myCmd.ExecuteScalar();
             myConnection1.Close();
-            GridView1.DataBind();
+            //GridView1.DataBind();
         }
     }
     protected void btnCancelar_Click(object sender, EventArgs e)
@@ -213,5 +213,13 @@ public partial class _Productos : System.Web.UI.Page
                 <button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;</button>
                 <h4><i class='icon fa fa-warning'></i> Error!</h4>" + exec.ToString() + "</div>";
         }
+    }
+    protected void btnBusqueda_Click(object sender, EventArgs e)
+    {
+        SqlDataSource1.SelectCommand = @"SELECT idproducto, nombre, descripcion, FTOP10105.estado, FTOP10106.unidaddemedida, medida, FTOP10102.fechacreacion, FTOP10102.usuariocreacion 
+                                            FROM FTOP10102, FTOP10106, FTOP10105 
+                                            WHERE FTOP10102.idunidaddemedida = FTOP10106.idunidaddemedida AND FTOP10102.idestado = FTOP10105.idestado 
+                                                    AND (FTOP10102.nombre like '%" + tbBusqueda.Text + "%' OR FTOP10102.descripcion like '%" + tbBusqueda.Text + "%')";
+        GridView1.DataBind();
     }
 }
