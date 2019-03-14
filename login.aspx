@@ -20,6 +20,8 @@
     <!-- iCheck -->
     <link rel="stylesheet" href="plugins/iCheck/square/blue.css">
 
+    <link rel="stylesheet" href="css/login.css">
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -30,9 +32,9 @@
     <!-- Google Font -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 </head>
-<body class="hold-transition login-page">
+<body>
     <form id="form1" runat="server">
-        <div class="login-box">
+        <div class="container">
             <div class="login-logo">
                 <b>FARMACIAS TOP</b>
             </div>
@@ -48,12 +50,12 @@
                     <asp:TextBox ID="tbContrasena" runat="server" class="form-control" TextMode="Password"></asp:TextBox>
                 </div>
                 <div class="row text-center">
-                    <asp:Button ID="btnLogin" runat="server" Text="Iniciar sesión" class="btn btn-primary" OnClick="btnLogin_Click" />
+                    <asp:Button ID="btnLogin" runat="server" Text="Iniciar sesión" class="btn btn-lg btn-success" OnClick="btnLogin_Click" />
 
                 </div>
                 <asp:Label ID="lblMensaje" runat="server"></asp:Label>
+                <!-- /.login-box-body -->
             </div>
-        <!-- /.login-box-body -->
         </div>
         <!-- /.login-box -->
     </form>
@@ -71,6 +73,6 @@
                 increaseArea: '20%' /* optional */
             });
         });
-</script>
+    </script>
 </body>
 </html>
