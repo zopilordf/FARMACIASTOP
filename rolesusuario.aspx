@@ -62,7 +62,7 @@
                         <SortedDescendingCellStyle BackColor="#FFFDF8" />
                         <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
                     </asp:GridView>
-                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:FARMACIASTOPConnectionString %>" SelectCommand="select FTOP00101.nombre as nombrerol, FTOP00100.nombre as nombreusuario, FTOP00101.idrol, FTOP00100.idusuario, FTOP00102.fechacreacion from FTOP00102, FTOP00100, FTOP00101 where FTOP00102.idroles = FTOP00101.idrol AND FTOP00102.idusuario = FTOP00100.idusuario"></asp:SqlDataSource>
+                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:FARMACIASTOPConnectionString %>" SelectCommand="select FTOP00101.idrol, FTOP00100.idusuario, FTOP00101.nombre as nombrerol, FTOP00100.nombre as nombreusuario, FTOP00102.fechacreacion from FTOP00102, FTOP00100, FTOP00101 where FTOP00102.idroles = FTOP00101.idrol AND FTOP00102.idusuario = FTOP00100.idusuario"></asp:SqlDataSource>
 
                     <!-- /.row -->
                 </div>
