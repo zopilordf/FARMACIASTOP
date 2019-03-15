@@ -32,16 +32,13 @@
   <![endif]-->
 
     <!-- Google Font -->
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
-    <body class="hold-transition skin-green sidebar-mini">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
         <asp:ContentPlaceHolder ID="head" runat="server">
         </asp:ContentPlaceHolder>
 </head>
-<body class="hold-transition skin-green sidebar-mini">
-    <form id="form1" runat="server">
+<body class="hold-transition skin-blue sidebar-mini">
     <div class="wrapper">
-
+        <form id="form1" runat="server">
         <header class="main-header">
 
             <!-- Logo -->
