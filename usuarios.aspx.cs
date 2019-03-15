@@ -136,7 +136,7 @@ public partial class _Usuarios : System.Web.UI.Page
             DataTable dt = new DataTable();
             SqlConnection myConnection1 = new SqlConnection(conexion);
             myConnection1.Open();
-            String myString = @"SELECT idusuario, nombre, contraseña, fechacreacion FROM FTOP00100";
+            String myString = SqlDataSource1.SelectCommand.ToString();
             SqlCommand myCmd = new SqlCommand(myString, myConnection1);
             da = new SqlDataAdapter(myCmd);
             da.Fill(dt);

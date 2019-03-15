@@ -141,7 +141,7 @@ public partial class _Parametros : System.Web.UI.Page
             DataTable dt = new DataTable();
             SqlConnection myConnection1 = new SqlConnection(conexion);
             myConnection1.Open();
-            String myString = @"SELECT [idparametro], [parametro], [valor], [descripcion], [fechacreacion] FROM [FTOP10107]";
+            String myString = SqlDataSource1.SelectCommand.ToString();
             SqlCommand myCmd = new SqlCommand(myString, myConnection1);
             da = new SqlDataAdapter(myCmd);
             da.Fill(dt);

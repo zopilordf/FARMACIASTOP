@@ -130,7 +130,7 @@ public partial class _Tiposproducto : System.Web.UI.Page
             DataTable dt = new DataTable();
             SqlConnection myConnection1 = new SqlConnection(conexion);
             myConnection1.Open();
-            String myString = @"SELECT [idTiposproducto], [Tiposproducto], [descripcion], [fechacreacion] FROM [FTOP10103]";
+            String myString = SqlDataSource1.SelectCommand.ToString();
             SqlCommand myCmd = new SqlCommand(myString, myConnection1);
             da = new SqlDataAdapter(myCmd);
             da.Fill(dt);

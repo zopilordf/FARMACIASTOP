@@ -158,7 +158,7 @@ public partial class _Clientes : System.Web.UI.Page
             DataTable dt = new DataTable();
             SqlConnection myConnection1 = new SqlConnection(conexion);
             myConnection1.Open();
-            String myString = @"SELECT idcliente, nombre, nit, direccion, telefono, email, fechacreacion, usuariocreacion FROM [FTOP10100]";
+            String myString = SqlDataSource1.SelectCommand.ToString();
             SqlCommand myCmd = new SqlCommand(myString, myConnection1);
             da = new SqlDataAdapter(myCmd);
             da.Fill(dt);

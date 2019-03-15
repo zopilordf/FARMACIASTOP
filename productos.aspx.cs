@@ -156,7 +156,7 @@ public partial class _Productos : System.Web.UI.Page
         }
         //myCmd.ExecuteScalar();
         myConnection1.Close();
-        
+
     }
     protected void GridView1_RowCommand(object sender, GridViewCommandEventArgs e)
     {
@@ -168,19 +168,9 @@ public partial class _Productos : System.Web.UI.Page
             DataTable dt = new DataTable();
             SqlConnection myConnection1 = new SqlConnection(conexion);
             myConnection1.Open();
-            String myString = @"SELECT idproducto, nombre, FTOP10102.descripcion, imagen,
-                                        FTOP10103.idtiposproducto, FTOP10103.tiposproducto,
-                                        FTOP10104.idlaboratorio, FTOP10104.laboratorio,
-                                        FTOP10105.idestado, FTOP10105.estado, 
-                                        FTOP10106.idunidaddemedida, FTOP10106.unidaddemedida, 
-                                        medida, preciocompra, precioventa, 
-                                        FTOP10102.fechacreacion, FTOP10102.usuariocreacion 
-                                FROM FTOP10102, FTOP10106, FTOP10105, FTOP10103, FTOP10104 
-                                WHERE FTOP10102.idunidaddemedida = FTOP10106.idunidaddemedida AND 
-                                        FTOP10102.idestado = FTOP10105.idestado AND
-                                        FTOP10103.idtiposproducto = FTOP10102.idtipoproducto AND
-                                        FTOP10104.idlaboratorio = FTOP10102.idlaboratorio";
+            String myString = SqlDataSource1.SelectCommand.ToString();
             SqlCommand myCmd = new SqlCommand(myString, myConnection1);
+            myCmd.Parameters.AddWithValue("@tbBusqueda", SqlDbType.VarChar).Value = tbBusqueda.Text;
             da = new SqlDataAdapter(myCmd);
             da.Fill(dt);
             if (dt.Rows.Count > 0)

@@ -125,7 +125,7 @@ public partial class _Estados : System.Web.UI.Page
             DataTable dt = new DataTable();
             SqlConnection myConnection1 = new SqlConnection(conexion);
             myConnection1.Open();
-            String myString = @"SELECT idEstado, Estado, fechacreacion FROM FTOP10105";
+            String myString = SqlDataSource1.SelectCommand.ToString();
             SqlCommand myCmd = new SqlCommand(myString, myConnection1);
             da = new SqlDataAdapter(myCmd);
             da.Fill(dt);

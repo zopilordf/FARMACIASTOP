@@ -118,7 +118,7 @@ public partial class _RolesUsuario : System.Web.UI.Page
             DataTable dt = new DataTable();
             SqlConnection myConnection1 = new SqlConnection(conexion);
             myConnection1.Open();
-            String myString = @"select FTOP00101.idrol, FTOP00100.idusuario, FTOP00101.nombre as nombrerol, FTOP00100.nombre as nombreusuario, FTOP00102.fechacreacion from FTOP00102, FTOP00100, FTOP00101 where FTOP00102.idroles = FTOP00101.idrol AND FTOP00102.idusuario = FTOP00100.idusuario";
+            String myString = SqlDataSource1.SelectCommand.ToString();
             SqlCommand myCmd = new SqlCommand(myString, myConnection1);
             da = new SqlDataAdapter(myCmd);
             da.Fill(dt);
